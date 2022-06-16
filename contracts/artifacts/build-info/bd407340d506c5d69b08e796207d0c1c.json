@@ -1,0 +1,68 @@
+{
+	"id": "bd407340d506c5d69b08e796207d0c1c",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.5",
+	"solcLongVersion": "0.8.5+commit.a4f2e591",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\npragma solidity > 0.7.0;\n\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"sources": {
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": {
+				"ast": {
+					"absolutePath": "Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol",
+					"exportedSymbols": {},
+					"id": 2,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">",
+								"0.7",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "36:24:0"
+						}
+					],
+					"src": "36:26:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

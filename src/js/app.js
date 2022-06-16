@@ -80,6 +80,7 @@ App = {
       electionInstance = instance;
       return electionInstance.candidatesCount();
     }).then(function(candidatesCount) {
+      console.log("CANDIDATE COUNT: " + candidatesCount);
       var candidatesResults = $("#candidatesResults");
       candidatesResults.empty();
 
@@ -91,13 +92,14 @@ App = {
           var id = candidate[0];
           var name = candidate[1];
           var voteCount = candidate[2];
+          console.log("Appending Candidate")
 
           // Render candidate Result
           var candidateTemplate = "<tr><th>" + id + "</th><td>" + name + "</td><td>" + voteCount + "</td></tr>"
           candidatesResults.append(candidateTemplate);
 
           // Render candidate ballot option
-          var candidateOption = "<option value='" + id + "' >" + name + "</ option>"
+          var candidateOption = "<option value='" + id + "' >" + name + "</option>"
           candidatesSelect.append(candidateOption);
         });
       }
@@ -105,10 +107,48 @@ App = {
     }).then(function(hasVoted) {
       // Do not allow a user to vote
       if(hasVoted) {
-        $('form').hide();
+        $('#voteForm').hide();
+      }else if(!hasVoted){
+        $('#alreadyVotedText').hide();
       }
+
       loader.hide();
       content.show();
+      return electionInstance.electionOwner();
+    }).then(function (electionOwner){
+      if (electionOwner === App.account){
+        $('#voteForm').hide();
+        $('#accountAddress').append("<p>Election owner</p>")
+      }else{
+        $('#electionOwnerContainer').hide();
+        electionInstance.isOpened().then(function (isOpened){
+          if (isOpened != 2){
+            $('#voteForm').hide();
+          }
+        });
+      }
+      return electionInstance.isOpened();
+    }).then(function (isOpened){
+      if ((isOpened ==0)){
+        // Election closed state
+        $('#closeElectionButton').hide();
+        $('#pauseElectionButton').hide();
+        $('#electionStatus').append("<p>Election closed</p>");
+      }else if (isOpened == 1){
+        // Election paused state
+        $('#pauseElectionButton').hide();
+        $('#electionStatus').append("<p>Election paused</p>");
+      }
+      else if (isOpened == 2){
+        // Election opened state
+        $('#openElectionButton').hide();
+        $('#closeElectionButton').hide();
+        $('#electionStatus').append("<p>Election opened</p>");
+      }
+      return electionInstance.lastWinningCandidate();
+    }).then(function (winner){
+      console.log(winner)
+      $('#electionStatus').append(`<p>Latest Winner: ${winner}</p>`);
     }).catch(function(error) {
       console.warn(error);
     });
@@ -125,7 +165,37 @@ App = {
     }).catch(function(err) {
       console.error(err);
     });
-  }
+  },
+
+  openElection: function() {
+    App.contracts.Election.deployed().then(function(instance) {
+      return instance.openElection({ from: App.account });
+    }).then(function(result) {
+      App.render();
+    }).catch(function(err) {
+      console.error(err);
+    });
+  },
+
+  pauseElection: function() {
+    App.contracts.Election.deployed().then(function(instance) {
+      return instance.pauseElection({ from: App.account });
+    }).then(function(result) {
+      App.render();
+    }).catch(function(err) {
+      console.error(err);
+    });
+  },
+
+closeElection: function() {
+  App.contracts.Election.deployed().then(function(instance) {
+    return instance.closeElection({ from: App.account });
+  }).then(function(result) {
+    App.render();
+  }).catch(function(err) {
+    console.error(err);
+  });
+}
 };
 
 $(function() {

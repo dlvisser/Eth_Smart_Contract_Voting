@@ -14,13 +14,39 @@
 				"anonymous": false,
 				"inputs": [
 					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_isOpened",
+						"type": "string"
+					}
+				],
+				"name": "ChangedEventState",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
 						"indexed": true,
 						"internalType": "uint256",
 						"name": "_candidateId",
 						"type": "uint256"
 					}
 				],
-				"name": "votedEvent",
+				"name": "VotedEvent",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "_winningCandidate",
+						"type": "string"
+					}
+				],
+				"name": "WinnerPrinted",
 				"type": "event"
 			},
 			{
@@ -66,6 +92,66 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "closeElection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "electionOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isOpened",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastWinningCandidate",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "openElection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pauseElection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -95,6 +181,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "winningCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -126,11 +219,11 @@
 	},
 	"sources": {
 		"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Election.sol": {
-			"keccak256": "0x8dba679ba5a163dc0da559d170dd58810dd9cab94e227ba49913232cde05f7fd",
+			"keccak256": "0x04917f74564a0e78e0c29f75fc62acdbcaa839a1fdfbf29ef326ec7f9cd8d6bf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://697a94fd036e114c2352077deb7c003d498d97915c0d0a7e73701fc4b7635415",
-				"dweb:/ipfs/QmU2xmfQx9EbrMwFb5sCeWvkbc8x5qSP8szfQKRCrgajDa"
+				"bzz-raw://47e8b4a769d767b96be1cf7388a8d2336f3cfbb84140b041ce5d9a7af75cb665",
+				"dweb:/ipfs/QmWSyxzhh9t874G78S7UzHfPDhZAbRWtPHP7LpwVVJf8Zq"
 			]
 		}
 	},

@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.14+commit.80d49f37"
+		"version": "0.8.5+commit.a4f2e591"
 	},
 	"language": "Solidity",
 	"output": {
@@ -76,9 +76,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Downloads/election-master/contracts/Migrations.sol": "Migrations"
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Migrations.sol": "Migrations"
 		},
-		"evmVersion": "london",
+		"evmVersion": "berlin",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -90,7 +90,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"Downloads/election-master/contracts/Migrations.sol": {
+		"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Migrations.sol": {
 			"keccak256": "0xead30f965a14b5dcb0d881c2dd80ebe74c6183d7a517e6487aeff4f10d770e48",
 			"license": "MIT",
 			"urls": [

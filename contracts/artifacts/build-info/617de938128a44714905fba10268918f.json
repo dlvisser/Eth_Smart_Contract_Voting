@@ -1,0 +1,601 @@
+{
+	"id": "617de938128a44714905fba10268918f",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.5",
+	"solcLongVersion": "0.8.5+commit.a4f2e591",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\npragma solidity 0.8.5;\n\ncontract Ownable{\n\n    address private _owner;\n\n    constructor(){\n        _owner = msg.sender;\n    }\n\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": {
+				"Ownable": {
+					"abi": [
+						{
+							"inputs": [],
+							"stateMutability": "nonpayable",
+							"type": "constructor"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":60:164  contract Ownable{... */\n  mstore(0x40, 0x80)\n    /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":112:161  constructor(){... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n    /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":144:154  msg.sender */\n  caller\n    /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":135:141  _owner */\n  0x00\n  dup1\n    /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":135:154  _owner = msg.sender */\n  0x0100\n  exp\n  dup2\n  sload\n  dup2\n  0xffffffffffffffffffffffffffffffffffffffff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":60:164  contract Ownable{... */\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":60:164  contract Ownable{... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa2646970667358221220c1791f811d74f858ad81b0470c0d582f0a773b56e174e4e6e378df230eb9de0464736f6c63430008050033\n}\n",
+						"bytecode": {
+							"functionDebugData": {
+								"@_12": {
+									"entryPoint": null,
+									"id": 12,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								}
+							},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603f80605d6000396000f3fe6080604052600080fdfea2646970667358221220c1791f811d74f858ad81b0470c0d582f0a773b56e174e4e6e378df230eb9de0464736f6c63430008050033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLER PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF MUL NOT AND SWAP1 DUP4 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND MUL OR SWAP1 SSTORE POP PUSH1 0x3F DUP1 PUSH1 0x5D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xC1 PUSH26 0x1F811D74F858AD81B0470C0D582F0A773B56E174E4E6E378DF23 0xE 0xB9 0xDE DIV PUSH5 0x736F6C6343 STOP ADDMOD SDIV STOP CALLER ",
+							"sourceMap": "60:104:0:-:0;;;112:49;;;;;;;;;;144:10;135:6;;:19;;;;;;;;;;;;;;;;;;60:104;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea2646970667358221220c1791f811d74f858ad81b0470c0d582f0a773b56e174e4e6e378df230eb9de0464736f6c63430008050033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xC1 PUSH26 0x1F811D74F858AD81B0470C0D582F0A773B56E174E4E6E378DF23 0xE 0xB9 0xDE DIV PUSH5 0x736F6C6343 STOP ADDMOD SDIV STOP CALLER ",
+							"sourceMap": "60:104:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "24332",
+								"totalCost": "36932"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 112,
+									"end": 161,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 154,
+									"name": "CALLER",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 141,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 135,
+									"end": 141,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "NOT",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "DUP4",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "OR",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "SSTORE",
+									"source": 0
+								},
+								{
+									"begin": 135,
+									"end": 154,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 60,
+									"end": 164,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a2646970667358221220c1791f811d74f858ad81b0470c0d582f0a773b56e174e4e6e378df230eb9de0464736f6c63430008050033",
+									".code": [
+										{
+											"begin": 60,
+											"end": 164,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 60,
+											"end": 164,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 60,
+											"end": 164,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 60,
+											"end": 164,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 60,
+											"end": 164,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 60,
+											"end": 164,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":\"Ownable\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol\":{\"keccak256\":\"0x4072d70d12371e3c3a0c1171e1fbf01a84049589c475f1848f20f3eb738ae375\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://10aa23e4c6a8d7bce38d80902873e14c6b0033aae2422ed194bbb35365b0cb84\",\"dweb:/ipfs/QmauEsCVCtjhhsG8C756dJMFcLdmJLV4V189VnRWJVXGjw\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 3,
+								"contract": "Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol:Ownable",
+								"label": "_owner",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_address"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": {
+				"ast": {
+					"absolutePath": "Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol",
+					"exportedSymbols": {
+						"Ownable": [
+							13
+						]
+					},
+					"id": 14,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"0.8",
+								".5"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "36:22:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 13,
+							"linearizedBaseContracts": [
+								13
+							],
+							"name": "Ownable",
+							"nameLocation": "69:7:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "_owner",
+									"nameLocation": "99:6:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 13,
+									"src": "83:22:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "83:7:0",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "private"
+								},
+								{
+									"body": {
+										"id": 11,
+										"nodeType": "Block",
+										"src": "125:36:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 9,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftHandSide": {
+														"id": 6,
+														"name": "_owner",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 3,
+														"src": "135:6:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"nodeType": "Assignment",
+													"operator": "=",
+													"rightHandSide": {
+														"expression": {
+															"id": 7,
+															"name": "msg",
+															"nodeType": "Identifier",
+															"overloadedDeclarations": [],
+															"referencedDeclaration": 4294967281,
+															"src": "144:3:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_magic_message",
+																"typeString": "msg"
+															}
+														},
+														"id": 8,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": false,
+														"lValueRequested": false,
+														"memberName": "sender",
+														"nodeType": "MemberAccess",
+														"src": "144:10:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"src": "135:19:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"id": 10,
+												"nodeType": "ExpressionStatement",
+												"src": "135:19:0"
+											}
+										]
+									},
+									"id": 12,
+									"implemented": true,
+									"kind": "constructor",
+									"modifiers": [],
+									"name": "",
+									"nameLocation": "-1:-1:-1",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 4,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "123:2:0"
+									},
+									"returnParameters": {
+										"id": 5,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "125:0:0"
+									},
+									"scope": 13,
+									"src": "112:49:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "public"
+								}
+							],
+							"scope": 14,
+							"src": "60:104:0",
+							"usedErrors": []
+						}
+					],
+					"src": "36:128:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

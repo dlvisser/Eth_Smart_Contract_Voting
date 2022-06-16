@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.5+commit.a4f2e591"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": "Ownable"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Development-Codebases/Blockchain/Eth_Smart_Contract_Voting/contracts/Ticket.sol": {
+			"keccak256": "0x4072d70d12371e3c3a0c1171e1fbf01a84049589c475f1848f20f3eb738ae375",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://10aa23e4c6a8d7bce38d80902873e14c6b0033aae2422ed194bbb35365b0cb84",
+				"dweb:/ipfs/QmauEsCVCtjhhsG8C756dJMFcLdmJLV4V189VnRWJVXGjw"
+			]
+		}
+	},
+	"version": 1
+}
